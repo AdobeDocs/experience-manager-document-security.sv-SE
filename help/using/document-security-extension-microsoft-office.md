@@ -1,6 +1,6 @@
 ---
-title: Introduktion till AEM Document Security Extension for Microsoft&reg; Kontor
-description: 'Använda dokumentsäkerhetstillägg för Microsoft&reg; Office: du kan använda fördefinierade sekretessinställningar på din Microsoft&reg; Office-filer.'
+title: Introduktion till AEM Document Security Extension for Microsoft&reg; Office
+description: Med dokumentsäkerhetstillägget för Microsoft&reg; Office kan du använda fördefinierade sekretessinställningar för dina Microsoft&reg; Office-filer.
 uuid: a5428c50-fae3-4823-9e6f-0f5306e7248f
 content-type: reference
 topic-tags: using
@@ -8,7 +8,7 @@ discoiquuid: cf93f9f5-1fb6-4909-815e-0ffb8c6ea6d1
 exl-id: 3e07c031-3f88-4bde-bdb3-b136ef5f9527
 source-git-commit: 28137f26afc024d411857d44887bf69fe1ee2b81
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1288'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 Adobe® Experience Manager Document Security Extension för Microsoft® Office säkerställer att endast de personer du har behörighet att använda Word-, Excel- och PowerPoint-filer som innehåller din immateriella egendom. Genom att använda Document Security Extension för Microsoft® Office kan du använda fördefinierade sekretessinställningar för dina filer.
 
-Document Security Extension for Microsoft® Office utökar tillägget LiveCycle Rights Management och Document Security för Adobe Experience Manager Forms för att skydda Word-, Excel- och PowerPoint-filer och tillåter att behöriga användare som har programmet installerat kan använda profilskyddade filer enligt de sekretessinställningar som anges i policyn.
+Document Security Extension for Microsoft® Office utökar LiveCycle Rights Management- och Document Security-tillägget för Adobe Experience Manager Forms för att skydda Word-, Excel- och PowerPoint-filer och tillåter att behöriga användare som har programmet installerat kan använda profilskyddade filer enligt de sekretessinställningar som anges i policyn.
 
 ## Hur dokumentsäkerhet skyddar immateriell egendom {#how-document-security-protects-intellectual-property}
 
-Dokumentskydd säkerställer att bara de personer du ger behörighet kan använda filer som innehåller din immateriella egendom. Med dokumentskydd kan du skydda filer med hjälp av sekretessregler. A *policy* är en samling information som innehåller sekretessinställningar och en lista över behöriga användare. De inställningar du anger i en profil avgör hur en mottagare kan använda en fil som du tillämpar profilen på. Du kan till exempel ange om mottagarna ska kunna skriva ut eller kopiera text eller spara ändringar.
+Dokumentskydd säkerställer att bara de personer du ger behörighet kan använda filer som innehåller din immateriella egendom. Med dokumentskydd kan du skydda filer med hjälp av sekretessregler. En *princip* är en samling information som innehåller sekretessinställningar och en lista över behöriga användare. De inställningar du anger i en profil avgör hur en mottagare kan använda en fil som du tillämpar profilen på. Du kan till exempel ange om mottagarna ska kunna skriva ut eller kopiera text eller spara ändringar.
 
-Administratörer och användare av dokumentsäkerhet kan skapa profiler. Administratörer skapar organisationsprofiler som är tillgängliga för alla behöriga användare. Administratörer eller koordinatorer för principuppsättningar kan också skapa grupper med profiler som kallas *principuppsättningar* som är tillgängliga för en delmängd av användare. Användare kan skapa egna profiler, som bara de kan använda. Administratörer, principuppsättningskoordinatorer och användare kan skapa profiler med hjälp av webbsidorna Dokumentsäkerhet.
+Administratörer och användare av dokumentsäkerhet kan skapa profiler. Administratörer skapar organisationsprofiler som är tillgängliga för alla behöriga användare. Administratörer eller koordinatorer för principuppsättningar kan också skapa grupper med profiler som kallas *principuppsättningar* och som är tillgängliga för en delmängd av användare. Användare kan skapa egna profiler, som bara de kan använda. Administratörer, principuppsättningskoordinatorer och användare kan skapa profiler med hjälp av webbsidorna Dokumentsäkerhet.
 
 Även om profiler lagras på dokumentsäkerhet kan du tillämpa dem på filer via Word, Excel eller PowerPoint. När du tillämpar en profil på en fil skyddas informationen som filen innehåller av de sekretessinställningar som anges i profilen. När du distribuerar den profilskyddade filen kan bara de mottagare som har behörighet av profilen få åtkomst till filens innehåll.
 
@@ -43,18 +43,18 @@ Om principen tillåter åtkomst offline kan mottagarna även använda principsky
 
 ## Så här fungerar profilskyddade filer {#how-policy-protected-files-work}
 
-För att en användare ska kunna öppna och använda principskyddade Word-, Excel- och PowerPoint-filer måste principen inkludera användaren som mottagare eller tillåta anonym åtkomst. Användaren måste ha Document Security Extension för Microsoft® Office installerat. Om du vill ge en profilskyddad fil till någon som inte har Document Security Extension för Microsoft® Office kan du antingen ge dem en kopia av programvaran eller berätta för dem hur de laddar ned den från din webbplats. Om du inte har installationsprogrammet kan du hämta det från [nedladdningssida](https://experienceleague.adobe.com/docs/experience-manager-document-security/using/download-installer.html?lang=en).
+För att en användare ska kunna öppna och använda principskyddade Word-, Excel- och PowerPoint-filer måste principen inkludera användaren som mottagare eller tillåta anonym åtkomst. Användaren måste ha Document Security Extension för Microsoft® Office installerat. Om du vill ge en profilskyddad fil till någon som inte har Document Security Extension för Microsoft® Office kan du antingen ge dem en kopia av programvaran eller berätta för dem hur de laddar ned den från din webbplats. Om du inte har installationsprogrammet kan du hämta det från [hämtningssidan](https://experienceleague.adobe.com/docs/experience-manager-document-security/using/download-installer.html?lang=en).
 
 När en användare försöker öppna en profilskyddad fil ansluter Document Security Extension för Microsoft® Office till Document Security för att autentisera användaren. Om Dokumentsäkerhet är konfigurerat för att granska filanvändningen ser användaren ett meddelande om att filanvändningen håller på att granskas. Dokumentskydd avgör vilka filbehörigheter som användaren och användaren kan använda filen enligt principinställningarna under följande förhållanden:
 
 * För den giltighetsperiod som anges i policyn.
 * Tills en administratör eller den person som tillämpade profilen antingen återkallar åtkomsten till filen eller ändrar profilen.
 
-   Om den person som tillämpade profilen ändrar profilen eller nekar åtkomst till filen, ändras eller tas användarens behörigheter bort för filen även om användaren redan har filen. Om själva filen har återkallats kan användaren få en uppdaterad kopia via en URL.
+  Om den person som tillämpade profilen ändrar profilen eller nekar åtkomst till filen, ändras eller tas användarens behörigheter bort för filen även om användaren redan har filen. Om själva filen har återkallats kan användaren få en uppdaterad kopia via en URL.
 
-   Principskyddade filer kan öppnas offline (utan Internet- eller nätverksanslutning) om principen tillåter åtkomst offline, under den offlinelåneperiod som anges i principen. När offlineleasingperioden är slut måste användaren vara online och synkronisera med Document Security, som påbörjar en ny låneperiod.
+  Principskyddade filer kan öppnas offline (utan Internet- eller nätverksanslutning) om principen tillåter åtkomst offline, under den offlinelåneperiod som anges i principen. När offlineleasingperioden är slut måste användaren vara online och synkronisera med Document Security, som påbörjar en ny låneperiod.
 
-   Om profilen tillåter att filen sparas och en användare sparar en kopia av den principskyddade filen, används profilen automatiskt och används för den sparade filen. Händelser, till exempel försök att öppna den nya filen, granskas också och registreras på samma sätt som för den ursprungliga filen.
+  Om profilen tillåter att filen sparas och en användare sparar en kopia av den principskyddade filen, används profilen automatiskt och används för den sparade filen. Händelser, till exempel försök att öppna den nya filen, granskas också och registreras på samma sätt som för den ursprungliga filen.
 
 ## Skydda filerna med dokumentskydd {#using-document-security-to-protect-your-files}
 
@@ -77,8 +77,8 @@ Resurserna i den här tabellen kan hjälpa dig att lära dig mer om AEM dokument
    <th><p>Se</p> </th>
   </tr>
   <tr>
-   <td><p>Administratörshjälp för AEM</p> </td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/get-started/configure-general-aem-forms-settings.html?lang=en">Administratörshjälp</a> på administrationssidorna för dokumentsäkerhet klickar du på länken Hjälp i det övre högra hörnet på en sida.</p> </td>
+   <td><p>Hjälp för AEM</p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/get-started/configure-general-aem-forms-settings.html?lang=en">Administratörshjälp</a> eller klicka på länken Hjälp i det övre högra hörnet på sidan på administrationssidorna för dokumentsäkerhet.</p> </td>
   </tr>
   <tr>
    <td><p>Uppdateringar, teknisk information och ytterligare information om den här produktversionen</p> </td>

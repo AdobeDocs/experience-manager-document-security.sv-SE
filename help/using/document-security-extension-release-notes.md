@@ -8,7 +8,7 @@ discoiquuid: c9342c28-8289-4831-a613-4bc03431f557
 exl-id: 582f10bb-60d2-46ed-b81d-5818a040edc6
 source-git-commit: 28137f26afc024d411857d44887bf69fe1ee2b81
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Den här versionen av Document Security Extension för Microsoft Office är kompatibel med Adobe LiveCycle Rights Management ES2 och senare samt Document Security för AEM formulär.
 
-Granska informationen i det här dokumentet innan du installerar AEM Document Security Extension för Microsoft Office. Detaljerade installationsanvisningar finns i [Installera och konfigurera AEM Document Security Extension for Microsoft Office](installing-configuring-aemdsext.md) artikel.
+Granska informationen i det här dokumentet innan du installerar AEM Document Security Extension för Microsoft Office. Detaljerade installationsanvisningar finns i artikeln [Installera och konfigurera AEM Document Security Extension for Microsoft Office](installing-configuring-aemdsext.md).
 
 ## Åtgärdade problem {#fixed-issues}
 
@@ -37,7 +37,7 @@ Granska informationen i det här dokumentet innan du installerar AEM Document Se
 
 ### Plugin-program från tredje part stöds inte {#third-party-plug-ins-not-supported}
 
-AEM Document Security Extension för Microsoft Office fungerar inte med plugin-program från tredje part. Avinstallera eventuella plugin-program från tredje part för Microsoft Office innan du installerar Document Security Extension för Microsoft Office.
+AEM Document Security Extension för Microsoft Office fungerar inte med plugin-program från tredje part. Avinstallera eventuella tredjepartsplugins för Microsoft Office innan du installerar Document Security Extension för Microsoft Office.
 
 ### Inaktiverade menyalternativ i Microsoft Word, Excel och PowerPoint {#disabled-menu-options-in-microsoft-word-excel-and-powerpoint}
 
@@ -51,10 +51,10 @@ I Microsoft Office är följande alternativ inte tillgängliga under en skyddad 
 
    * Arkiv > Spara som
    * Arkiv > Historik
-   * Arkiv > Dela
+   * File > Share
    * Arkiv > Exportera
-   * Arkiv > Publicera
-   * Arkiv > Konto
+   * Arkiv > Publish
+   * File > Account
    * Arkiv > Info > Protect Document/Workbook/Presentation > Kryptera med lösenord
    * Arkiv > Info > Protect-dokument >Lägg till en digital signatur
    * Arkiv > Info > Protect-dokument > Markera som slutgiltigt
@@ -63,9 +63,9 @@ I Microsoft Office är följande alternativ inte tillgängliga under en skyddad 
 * Microsoft Office 2013
 
    * Arkiv > Spara som
-   * Arkiv > Dela
+   * File > Share
    * Arkiv > Exportera
-   * Arkiv > Konto
+   * File > Account
    * Arkiv > Info > Protect Document/Workbook/Presentation > Kryptera med lösenord
    * Arkiv > Info > Protect-dokument >Lägg till en digital signatur
    * Arkiv > Info > Protect-dokument > Markera som slutgiltigt
@@ -80,7 +80,7 @@ När du öppnar ett skyddat dokument från SharePoint Server inaktiveras alla be
 
 ### Använd en profil med en dynamisk vattenstämpel på Microsoft Excel 2013-, Microsoft Excel 2016- och Microsoft Excel 2019-filer utan någon skrivare installerad {#apply-a-policy-with-a-dynamic-watermark-to-microsoft-excel-microsoft-excel-and-microsoft-excel-file-with-no-printer-installed}
 
-När du tillämpar en profil med dynamisk vattenstämpel på en Microsoft Excel 2013-, Microsoft Excel 2016- och Microsoft Excel 2019-fil på en dator som inte har några skrivare installerade och sedan sparar filen, visas följande fel: &quot;Internt fel vid användning av dynamisk vattenstämpel.&quot; Det här felet visas också när du öppnar den skyddade filen igen. Vattenstämpeln används inte och den visas inte i Visa > Sidlayout.
+När du tillämpar en profil med dynamisk vattenstämpel på en Microsoft Excel 2013-, Microsoft Excel 2016- och Microsoft Excel 2019-fil på en dator som inte har några skrivare installerade och sedan sparar filen, visas följande fel:&quot;Internt fel när dynamisk vattenstämpel används.&quot; Det här felet visas också när du öppnar den skyddade filen igen. Vattenstämpeln används inte och den visas inte i Visa > Sidlayout.
 
 ### Inaktivera Windows Data Execution Prevention för Office-program som stöds {#disable-windows-data-execution-prevention-for-supported-office-applications}
 
@@ -116,7 +116,7 @@ Om en cell i ett Microsoft Excel-dokument innehåller en bild eller är fylld me
 
 ### Användbarhetsproblem med flera certifikat {#usability-issue-with-multiple-certificates}
 
-Om det finns flera certifikat på klientdatorn och användaren avbryter dialogrutan för val av certifikat visas dialogrutan igen och användaren måste avbryta dialogrutan två gånger.
+Om det finns flera certifikat på klientdatorn och användaren avbryter dialogrutan för val av certifikat, visas dialogrutan igen och användaren måste avbryta dialogrutan två gånger.
 
 ### Microsoft PowerPoint tillåter redigering av skyddade dokument {#microsoft-powerpoint-allows-editing-protected-documents}
 
