@@ -4,9 +4,9 @@ description: Använda AEM Document Security Extension för Microsoft Office
 uuid: 8d98a355-df25-4d8e-ae76-a63a93f280c4
 contentOwner: dhv
 discoiquuid: df6ca960-ccfb-411a-b61d-d52bce0725a7
-source-git-commit: 28137f26afc024d411857d44887bf69fe1ee2b81
+source-git-commit: 8a10fb9fa24409b695fdaf1431228c6281bf78c3
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >[Introduktion till AEM dokumentsäkerhetstillägg för Microsoft Office ](../document-security-extension-microsoft-office.md) {#introduction-to-aem-document-security-extension-for-microsoft-office}
 >
->Med dokumentsäkerhetstillägget för Microsoft Office kan du använda fördefinierade sekretessinställningar för dina Microsoft Office-filer.
+>Med Document Security Extension för Microsoft Office kan du använda fördefinierade sekretessinställningar för dina Microsoft Office-filer.
 
 >[!NOTE]
 >
