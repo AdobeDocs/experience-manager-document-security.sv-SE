@@ -6,9 +6,9 @@ content-type: reference
 topic-tags: installing
 discoiquuid: c9342c28-8289-4831-a613-4bc03431f557
 exl-id: 582f10bb-60d2-46ed-b81d-5818a040edc6
-source-git-commit: 28137f26afc024d411857d44887bf69fe1ee2b81
+source-git-commit: 3b6a686966fb8d006bed8cc4a4bf5eebe0dfb030
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Dokumentet använder termerna Adobe Experience Manager Document Security för Microsoft Office, Adobe Experience Manager Document Security Extension för Microsoft Office och Document Security Extension för Microsoft Office.
+>I dokumentet används följande termer som en växling:
+>
+>* Adobe Experience Manager Document Security för Microsoft Office
+>* Adobe Experience Manager Document Security Extension for Microsoft Office
+>* Document Security Extension for Microsoft Office
 
 ## Installera och konfigurera AEM Document Security Extension for Microsoft Office {#installing-and-configuring-aem-document-security-extension-for-microsoft-office}
 
@@ -31,7 +35,7 @@ Granska informationen i det här dokumentet innan du installerar AEM Document Se
 
 ## Åtgärdade problem {#fixed-issues}
 
-* Strängar visas lodrätt och fel radbrytningar läggs till i innehållet. (Referensnummer CQ-4201054)
+* Strängar visas lodrätt och fel radbrytningar läggs till i innehållet. (CQ-4201054)
 
 ## Kända fel {#known-issues}
 
@@ -72,7 +76,7 @@ I Microsoft Office är följande alternativ inte tillgängliga under en skyddad 
 
 ### Öppna ett skyddat dokument från SharePoint Server {#opening-a-protected-document-from-sharepoint-server}
 
-Öppna det skyddade dokumentet: Om du försöker öppna ett skyddat dokument i Document Security Extension för Microsoft Office från SharePoint Server utan att först öppna det Microsoft Office-program som är kopplat till filtypen, t.ex. Microsoft Word, Microsoft Excel eller Microsoft PowerPoint, kanske dokumentet inte öppnas. Ett felmeddelande visas som anger att du har installerat det tillämpliga plugin-programmet. Därför rekommenderar vi att du öppnar det tillhörande Microsoft Office-programmet innan du öppnar ett skyddat dokument i Document Security Extension för Microsoft Office från SharePoint Server.
+Om du vill öppna ett skyddat dokument i Document Security Extension för Microsoft Office från SharePoint Server, öppnar du först det associerade Microsoft Office-programmet (Word, Excel eller PowerPoint), annars kanske dokumentet inte öppnas. Ett felmeddelande visas som anger att du har installerat det tillämpliga plugin-programmet. Därför rekommenderar vi att du öppnar det tillhörande Microsoft Office-programmet innan du öppnar ett skyddat dokument i Document Security Extension för Microsoft Office från SharePoint Server.
 
 (Valfritt) Du bör rensa cachemappen innan du öppnar ett skyddat dokument i Document Security Extension för Microsoft Office från SharePoint Server.
 
@@ -80,7 +84,7 @@ När du öppnar ett skyddat dokument från SharePoint Server inaktiveras alla be
 
 ### Använd en profil med en dynamisk vattenstämpel på Microsoft Excel 2013-, Microsoft Excel 2016- och Microsoft Excel 2019-filer utan någon skrivare installerad {#apply-a-policy-with-a-dynamic-watermark-to-microsoft-excel-microsoft-excel-and-microsoft-excel-file-with-no-printer-installed}
 
-När du tillämpar en profil med dynamisk vattenstämpel på en Microsoft Excel 2013-, Microsoft Excel 2016- och Microsoft Excel 2019-fil på en dator som inte har några skrivare installerade och sedan sparar filen, visas följande fel:&quot;Internt fel när dynamisk vattenstämpel används.&quot; Det här felet visas också när du öppnar den skyddade filen igen. Vattenstämpeln används inte och den visas inte i Visa > Sidlayout.
+Om du tillämpar en princip med dynamisk vattenstämpel på Excel 2013-, 2016- eller 2019-filer på en dator utan installerade skrivare uppstår följande fel:&quot;Internt fel när dynamisk vattenstämpel används.&quot; Det här felet visas också när du öppnar den skyddade filen igen. Vattenstämpeln används inte och den visas inte i Visa > Sidlayout.
 
 ### Inaktivera Windows Data Execution Prevention för Office-program som stöds {#disable-windows-data-execution-prevention-for-supported-office-applications}
 
@@ -92,7 +96,7 @@ När du skyddar en delad Microsoft Office-fil med Document Security Extension in
 
 ### Starta Office-program på en dator som innehåller Document Security Extension för Microsoft Office och McAfee VirusScan {#starting-office-applications-on-a-machine-containing-document-security-extension-for-microsoft-office-and-mcafee-virusscan}
 
-För att Office-programmen ska kunna startas smidigt på en dator där Document Security är installerat och McAfee VirusScan med On-Access Scan aktiverat, inaktiverar du alternativet Buffer Overflow Protection i McAfee VirusScan Console.
+För att säkerställa att Office-programmen startar smidigt på en dator med Document Security och McAfee VirusScan (On-Access Scan enabled) inaktiverar du alternativet Buffer Overflow Protection i McAfee VirusScan Console.
 
 ### Installera Document Security Extension för Microsoft Office på en dator med ett Microsoft Office-språk som inte stöds {#installing-document-security-extension-for-microsoft-office-on-a-machine-with-an-unsupported-microsoft-office-language}
 
@@ -104,7 +108,7 @@ Knappen Synkronisera offline är tillgänglig även om användaren inte har offl
 
 ### Inget stöd för testversioner av Microsoft Office {#no-support-for-trial-versions-of-microsoft-office}
 
-Dokumentsäkerhetstillägget för Microsoft Office stöder inte spårversioner av Microsoft Office. Innan du installerar tillägget måste du kontrollera att du har installerat en licensierad version av Microsoft Office och att den är aktiverad.
+Document Security Extension för Microsoft Office stöder inte spårversioner av Microsoft Office. Innan du installerar tillägget kontrollerar du att du har installerat en licensierad version av Microsoft Office och att den är aktiverad.
 
 ### Det går inte att öppna skyddade Microsoft Office-filer {#unable-to-open-a-protected-microsoft-office-files}
 
@@ -112,14 +116,14 @@ Om den skyddade vyn i Microsoft Office är aktiverad kan inte Right Management E
 
 ### Celler från Microsoft Excel-dokument som innehåller en bild eller bakgrundsfärg visas ovanpå vattenstämpeln {#cells-of-microsoft-excel-document-containing-an-image-or-background-color-appear-on-top-of-watermark}
 
-Om en cell i ett Microsoft Excel-dokument innehåller en bild eller är fylld med bakgrundsfärg och en dynamisk vattenstämpelpolicy används i dokumentet, visas bilden eller bakgrundsfärgen som är ifylld i cellen ovanpå vattenstämpeln och täcker vattenstämpeln.
+Om en cell i ett Excel-dokument har en bild- eller bakgrundsfärg och en dynamisk vattenstämpel används, täcker bilden eller färgen vattenstämpeln. Det innebär att vattenstämpeln täcks av bilden eller bakgrundsfärgen i cellen.
 
 ### Användbarhetsproblem med flera certifikat {#usability-issue-with-multiple-certificates}
 
-Om det finns flera certifikat på klientdatorn och användaren avbryter dialogrutan för val av certifikat, visas dialogrutan igen och användaren måste avbryta dialogrutan två gånger.
+Om det finns flera certifikat på klientdatorn och användaren avbryter dialogrutan för certifikatval visas dialogrutan igen. Användaren måste avbryta dialogrutan två gånger.
 
 ### Microsoft PowerPoint tillåter redigering av skyddade dokument {#microsoft-powerpoint-allows-editing-protected-documents}
 
-När du försöker redigera ett skyddat dokument visas meddelandet&quot;Du har inte behörighet att ändra det här dokumentet. Du kommer inte att kunna spara ändringarna.&quot; När du har stängt meddelandet kan användarna fortsätta lägga till text eller redigera dokumentet. Men ändringarna som gjorts i de skyddade dokumenten sparas inte.
+När du försöker redigera ett skyddat dokument visas meddelandet&quot;Du har inte behörighet att ändra det här dokumentet. Du kan inte spara ändringarna.&quot; När du har stängt meddelandet kan användarna fortsätta lägga till text eller redigera dokumentet. Men ändringarna som gjorts i de skyddade dokumenten sparas inte.
 
 Ovannämnda beteende är som väntat i PowerPoint 2013, PowerPoint 2016 och PowerPoint 2019.

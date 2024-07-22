@@ -8,9 +8,9 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/experience-manager-document-security.sv-SE
 index: true
 recommendations: noDisplay
-source-git-commit: 8b36d6dd8755d779c5e7f258df3ee2c68a5d1a5e
+source-git-commit: 6cf19ed9439e5be5a4c2e2fa2458879f37c25b96
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ Filen metadata.md innehåller metadata på postnivå som skickas till TOC.md-fil
 |--- |--- |
 | solution-title | Används i artikelrubriken som länk |
 | solution-hub-url | Öppnar navet för hjälpfunktioner |
-| solution-icon | Visar lösningsikonen bredvid lösningsrubriken. Inte implementerat ännu |
+| solution-icon | Visar en lösningsikon bredvid lösningsrubriken. Inte implementerat ännu |
 | getting-started-url | Länk till hjälpsidan Komma igång |
 | tutorials-url | Länka till videosjälvstudiekurser - antingen hjälpstudiekurser eller självstudiekurser på engelska |
 | mini-toc-nivåer | Anger antalet rubriknivåer som visas i den högra listen. standard är 2 |
-| git-repo | Anger platsen för huvudrapporten för intern användning |
+| git-repo | Anger platsen för den primära rapporten för intern användning |
 
 I filen TOC.md
 

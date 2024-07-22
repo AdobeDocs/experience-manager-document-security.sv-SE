@@ -6,9 +6,9 @@ content-type: reference
 topic-tags: using
 discoiquuid: f4c2460c-174f-4e4d-b804-1eb051d2781e
 exl-id: 667a9718-b865-4911-96c2-7c08f75e0732
-source-git-commit: 28137f26afc024d411857d44887bf69fe1ee2b81
+source-git-commit: 6cf19ed9439e5be5a4c2e2fa2458879f37c25b96
 workflow-type: tm+mt
-source-wordcount: '6242'
+source-wordcount: '6136'
 ht-degree: 0%
 
 ---
@@ -31,13 +31,13 @@ Med Document Security Extension för Microsoft® Office kan du göra följande:
 
 ### Ansluta till en dokumentsäkerhetsserver {#connect-to-a-document-security-server}
 
-Om du tänker tillämpa profiler på filer måste du konfigurera anslutningsinställningarna för dokumentsäkerhet. Beroende på hur Document Security Extension for Microsoft® Office installerades kanske du redan har standardanslutningsinställningar. Du kan lägga till anslutningsinställningar för en eller flera instanser av dokumentsäkerhet. Du kan hämta serverinformation från dokumentsäkerhetsadministratören.
+Om du tänker tillämpa profiler på filer måste du konfigurera anslutningsinställningarna för dokumentsäkerhet. Beroende på hur Document Security Extension for Microsoft® Office är installerat kan det hända att du redan har standardanslutningsinställningar. Du kan lägga till anslutningsinställningar för en eller flera instanser av dokumentsäkerhet. Du kan hämta serverinformation från dokumentsäkerhetsadministratören.
 
 Ange den server som du vill använda för att skydda filer eller hantera skyddade filer som standardserver. När du tillämpar en profil på en ny fil eller öppnar webbsidorna Dokumentsäkerhet ansluter Document Security Extension för Microsoft® Office till standardservern. Om du skyddar filer med mer än en instans av Dokumentskydd måste du ändra standardserverinställningen när du växlar mellan servrar. Du kan öppna filer som är skyddade av alla instanser av Dokumentskydd så länge du har behörighet att öppna filen.
 
-Om dokumentsäkerhetsservern använder certifikatbaserad autentisering måste du installera certifikatet som du fick på den lokala datorn. Du måste välja certifikatautentisering och ange det certifikat som du vill använda för att autentisera.
+Om dokumentsäkerhetsservern använder certifikatbaserad autentisering måste du installera certifikatet som du fick på den lokala datorn. Du måste välja en certifikatautentisering och ange det certifikat som du vill använda för att autentisera.
 
-När du har konfigurerat anslutningsinställningarna för en instans av Dokumentsäkerhet i ett Microsoft® Office-program konfigureras den för alla Word, Excel och PowerPoint.
+När du har konfigurerat anslutningsinställningarna för en instans av dokumentsäkerhet i ett Microsoft® Office-program, konfigureras den för alla Word-, Excel- och PowerPoint-filer.
 
 #### Installera certifikatet på klientsidan {#install-the-client-side-certificate}
 
@@ -72,11 +72,11 @@ Om du måste ha åtkomst till webbsidorna Dokumentsäkerhet via certifikatautent
 
 >[!NOTE]
 >
->Om du inte kan ansluta till servern kan du försöka öppna webbsidorna Dokumentsäkerhet i Internet Explorer. Om du inte kan ansluta till servern med Internet Explorer, eller om en dialogruta visar en varning om servercertifikatet, kan Document Security Extension för Microsoft® Office inte ansluta till servern. Kontakta serveradministratören om du behöver hjälp.
+>Om du inte kan ansluta till servern kan du försöka öppna webbsidorna Dokumentsäkerhet i Internet Explorer. Om du inte kan ansluta till servern med Internet Explorer, eller om en dialogruta visar en varning om servercertifikatet, kan inte Document Security Extension för Microsoft® Office ansluta till servern. Kontakta serveradministratören om du behöver hjälp.
 
 >[!NOTE]
 >
->Om du inte kan ansluta till dokumentskyddet visas ett meddelande om att användarnamnet och lösenordet är felaktiga. Kontrollera konfigurationsinställningarna och försök igen. Det här meddelandet kan visas om du inte kan ansluta av någon annan anledning. Om du ansluter till servern för första gången kontrollerar du att du har angett servernamnet och porten korrekt.
+>Om du inte kan ansluta till dokumentsäkerhet visas ett meddelande om att användarnamnet och lösenordet är felaktiga. Kontrollera konfigurationsinställningarna och försök igen. Det här meddelandet kan visas om du inte kan ansluta av någon annan anledning. Om du ansluter till servern för första gången kontrollerar du att du har angett servernamnet och porten korrekt.
 
 #### Ange standardserver {#specify-the-default-server}
 
@@ -90,15 +90,15 @@ Om du måste ha åtkomst till webbsidorna Dokumentsäkerhet via certifikatautent
 
 Du kan använda autentiseringsleverantörer från tredje part med AEM Forms Document Security. Dessa autentiseringsleverantörer hjälper dig att lägga till ett extra åtkomstlager till de skyddade dokumenten. AEM Forms Document Security har stöd för följande utökade autentiseringsarbetsflöden:
 
-* Utökad autentisering med AEM Forms-standardwebbadress
+* Utökad autentisering med standardwebbadressen för AEM Forms
 * Utökad autentisering med en anpassad URL
 * Standardarbetsflöde för utökad autentisering med tredjepartsidentitetsleverantörer konfigurerade på AEM Forms på JEE-servern
 * Anpassat arbetsflöde för utökad autentisering med tredjepartsidentitetsleverantörer konfigurerade på AEM Forms på JEE-servern
-* Utökad autentisering med anpassad sida för att lista SAML-autentiseringar
+* Utökad autentisering med en anpassad sida för att lista SAML-autentiseringar
 
 #### Utökad autentisering med AEM Forms-standardwebbadress {#extended-authentication-using-default-aem-forms-url}
 
-Du kan använda AEM Forms-standardwebbadressen för utökad autentisering. Standardlandningssidan innehåller Adobe-branding. Dessutom används standardinställningarna för AEM Forms när AEM Forms-URL används som standard för utökad autentisering.
+Du kan använda AEM Forms-standardwebbadressen för utökad autentisering. Standardlandningssidan innehåller Adobe-branding. Dessutom används AEM Forms standardinställningar för att använda AEM Forms-standardwebbadressen för utökad autentisering.
 
 Utför följande steg för att aktivera utökad autentisering med standardURL för landning i Adobe:
 
@@ -111,9 +111,9 @@ Utför följande steg för att aktivera utökad autentisering med standardURL f�
 
    >[!NOTE]
    >
-   >Använd ett fullständigt kvalificerat värdnamn i URL:en. Vi rekommenderar att du använder HTTPS-protokollet.
+   >Använd ett fullständigt kvalificerat värdnamn i URL:en. Adobe rekommenderar att du använder HTTPS-protokollet.
 
-   Nu är AEM Forms dokumentsäkerhet konfigurerat att använda utökad autentisering med AEM Forms standardstartadress.
+   Nu är AEM Forms Document Security konfigurerat att använda utökad autentisering med AEM Forms standardstartadress.
 
    ![](assets/third-party-authentication.png)
 
@@ -128,17 +128,17 @@ Du kan paketera den anpassade autentiseringssidan i en krigsfil och distribuera 
 
 Så här aktiverar du utökad autentisering med en anpassad landnings-URL:
 
-1. Distribuera den anpassade autentiserings-krigsfilen till AEM Forms Server.
+1. Distribuera WAR-filen för anpassad autentisering till AEM Forms Server.
 1. Öppna användargränssnittet för AEM Forms Admin.
 1. Navigera till Tjänster > Dokumentsäkerhet > Konfiguration > Serverkonfiguration.
 1. Aktivera alternativet Tillåt utökad autentisering och ange en anpassad URL för utökad autentisering.
-1. Lägg till följande poster i filen config.xml under SSO-noden efter posten *&lt;node name=&quot;AllowedUrls&quot;>*:
+1. Lägg till följande poster i filen `config.xml` under SSO-noden efter posten *&lt;node name=&quot;AllowedUrls&quot;>*:
 
    >[!NOTE]
    >
-   >&lt;entry key=&quot;sso-l&quot; value=&quot;/ sample_/login.jsp&quot;/>!discoiqbr!&lt;entry key=&quot;sso-s&quot; value=&quot;/ sample_/welcome.jsp&quot;>!discoiqbr!&lt;entry key=&quot;sso-o&quot; value=&quot;/ sample_/logout.jsp&quot;/>!discoiqbr!
+   >&lt;entry key=&quot;sso-l&quot; value=&quot;/ sample_/login.jsp&quot;/>`!!discoiqbr!!`&lt;entry key=&quot;sso-s&quot; value=&quot;/ sample_/welcome.jsp&quot;>`!!discoiqbr!!`&lt;entry key=&quot;sso-o&quot; value=&quot;/ sample_/logout.jsp&quot;/>`!!discoiqbr!!`
 
-   Stegvis information om hur du uppdaterar filen config.xml finns i [Redigera konfigurationsfilen för dokumentsäkerhet manuellt](https://helpx.adobe.com/aem-forms/6-3/admin-help/configuring-client-server-options.html#manually_editing_the_document_security_configuration_file).
+   Stegvis information om hur du uppdaterar filen config.xml finns i [Redigera konfigurationsfilen för dokumentsäkerhet manuellt](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions#manually_editing_the_document_security_configuration_file).
 
    Nu är AEM Forms dokumentsäkerhet konfigurerat att använda utökad autentisering med en anpassad landnings-URL
 
@@ -169,7 +169,7 @@ Du kan också visa en anpassad sida som innehåller alla autentiseringsproviders
 
    *saml.sp.discovery.url=/demoJSP/saml_discovery.jsp*
 
-   Nu är AEM Forms dokumentsäkerhet konfigurerad att visa en anpassad sida som innehåller alla konfigurerade autentiseringsproviders.
+   Nu är AEM Forms Document Security konfigurerat att visa en anpassad sida som innehåller alla konfigurerade autentiseringsproviders.
 
 ### Hämta ett användarkonto {#obtaining-a-user-account}
 
@@ -182,9 +182,9 @@ När du har registrerat och aktiverat ditt konto kan du använda principskyddade
 
 >[!NOTE]
 >
->Om du får en profilskyddad fil och inte har något dokumentskyddskonto, eller om du får en inbjudan att registrera dig, kontaktar du den person som skickade filen till dig för att få hjälp.
+>Om du får en principskyddad fil och inte har något dokumentskyddskonto kontaktar du den person som skickade filen. Om du får en inbjudan att registrera dig kan du kontakta avsändaren för att få hjälp.
 
-Om du får en e-postregistreringsinbjudan från Document Security kan du registrera dig genom att använda URL:en i e-postmeddelandet för att öppna onlineregistreringssidan. När du har registrerat dig får du ett andra meddelande om hur du aktiverar ditt konto.
+Om du får en e-postregistreringsinbjudan från Document Security kan du registrera dig genom att använda URL:en i e-postmeddelandet för att öppna onlineregistreringssidan. Efter registreringen får du ett andra meddelande om hur du aktiverar ditt konto.
 
 #### Hämta ett externt användarkonto {#obtain-an-external-user-account}
 
@@ -200,7 +200,7 @@ Om du får en e-postregistreringsinbjudan från Document Security kan du registr
 1. Öppna bekräftelsemeddelandet om registrering av dokumentsäkerhet.
 1. Klicka på den URL som visas i meddelandet.
 1. Klicka på länken till inloggningssidan.
-1. I rutan **Användarnamn** skriver du den e-postadress du registrerade under med Dokumentsäkerhet. Den här e-postadressen är ditt standardanvändarnamn för dokumentsäkerhet.
+1. I rutan **Användarnamn** skriver du den e-postadress som du är registrerad under med Dokumentsäkerhet. Den här e-postadressen är ditt standardanvändarnamn för dokumentsäkerhet.
 1. I rutan **Lösenord** anger du lösenordet som du skapade när du registrerade dig.
 1. Klicka på **Logga in**.
 
@@ -240,7 +240,7 @@ Vissa principinställningar som är tillgängliga för att skapa profiler på we
   </tr>
   <tr>
    <td><p>Ändra &gt; Ändra sidor</p></td>
-   <td><p>Ej tillämpligt.</p><p>Inkluderar infogning, borttagning och rotering av sidor.</p></td>
+   <td><p>Ej tillämpligt.</p><p>Det inkluderar infogning, borttagning och rotering av sidor.</p></td>
   </tr>
   <tr>
    <td><p>Ändra &gt; Fill &amp; Sign</p></td>
@@ -327,13 +327,13 @@ Mer information om hur du skapar och hanterar profiler finns i [Slutanvändarhj�
 
 ### Använd profiler {#applying-policies}
 
-Du kan tillämpa alla tillgängliga profiler på en fil, inklusive profiler som du har skapat och profiler som är en del av principuppsättningar som du har tillgång till. Innan du tillämpar en profil måste du spara filen.
+Du kan tillämpa alla tillgängliga profiler på en fil, inklusive profiler som du har skapat och profiler som ingår i de principuppsättningar som du har tillgång till. Innan du tillämpar en profil måste du spara filen.
 
-När du har tillämpat en profil läggs den till i listan Senast använda på menyn AEM dokumentsäkerhet för att göra det enklare för dig att tillämpa de profiler som du använder oftast. Om du använder mer än en instans av Dokumentskydd visar listan Senast använda bara profiler för den server som du för närvarande är ansluten till eller för standardservern om du ännu inte har loggat in på en instans av Dokumentsäkerhet.
+När du har tillämpat en profil läggs den till i listan Senast använda på menyn AEM dokumentsäkerhet för att göra det enklare för dig att tillämpa de profiler som du använder oftast. I listan Senast använda visas endast profiler för den server som du är ansluten till eller standardservern om du inte har loggat in på en annan Document Security-instans.
 
 >[!NOTE]
 >
->Du kan bara tillämpa profiler på Word-dokumentfiler (.doc, även.docx och .docm i Microsoft® Office 2010 och 2013), Excel-arbetsboksfiler (.xls, även .xlsx och .xlsm i Microsoft® Office 2010 och 2013) samt PowerPoint-presentationsfiler (.ppt, även .pptx och .pptm i Microsoft® Office 2010 och 2013). Du kan inte använda profiler på Word-mallfiler (.dot), Excel-mallfiler (.xlt) och PowerPoint-designmallfiler (.pot).
+>Profiler kan bara tillämpas på Word-filer (.doc, .docx, .docm), Excel-filer (.xls, .xlsx, .xlsm) och PowerPoint-filer (.ppt, .pptx, .pptm) i Microsoft® Office 2010 och 2013. Du kan inte använda profiler på Word-mallfiler (.dot), Excel-mallfiler (.xlt) och PowerPoint-designmallfiler (.pot).
 
 #### Tillämpa en profil {#apply-a-policy}
 
@@ -346,46 +346,46 @@ När du har tillämpat en profil läggs den till i listan Senast använda på me
 
 #### Använd en nyligen använd princip {#apply-a-recently-used-policy}
 
-1. I Document Security Extension för Microsoft® Office 2010 och 2013 väljer du **Skydda > ***[Principnamn]* på fliken **Dokumentsäkerhet**.
+1. I Document Security Extension för Microsoft® Office 2010 och 2013 väljer du **Skydda** > *[Principnamn]* på fliken **Dokumentsäkerhet**.
 1. Spara filen.
 
 ## Arbeta med skyddsskyddade filer {#usingaemdocumentsecurityextensionpolicyprotectedfiles}
 
-Policyskyddade filer innehåller immateriell egendom som ägs av filutgivaren och skyddas av Dokumentsäkerhet.
+Filutgivaren äger immateriell egendom i principskyddade filer, som dokumentskyddet skyddar.
 
-Du kan använda principskyddade filer oavsett om du är intern eller extern i förhållande till filutgivarens organisation. Om du vill öppna principskyddade filer måste du känna igen dig genom Document Security, antingen genom att inkludera dem i en länkad LDAP- eller Active Directory-lista, läggas till som lokal användare för LiveCycle eller AEM formulär i JEE, eller genom att registrera dig med Document Security efter att ha bjudits in som användare.
+Du kan använda principskyddade filer oavsett om du är intern eller extern i förhållande till filutgivarens organisation. Dokumentsäkerhet måste känna igen dig för att kunna öppna principskyddade filer. Det måste göras via LDAP/Active Directory. Eller så måste den göra det som lokal användare för LiveCycle-/AEM-formulär på JEE, eller genom att registrera efter en inbjudan.
 
-Om du får en profilskyddad fil och inte har något dokumentskyddskonto, eller om du får en inbjudan att registrera dig, kontaktar du den person som skickade filen till dig för att få hjälp.
+Om du tar emot en principskyddad fil och inte har något Document Security-konto kontaktar du avsändaren för att få hjälp. Om du får en inbjudan att registrera dig kan du kontakta avsändaren för att få hjälp.
 
 ### Arbeta med principskyddade filer i Microsoft® Office {#working-with-policy-protected-files-in-microsoft-office}
 
 Document Security Extension för Microsoft® Office begränsar vissa funktioner i Word, Excel och PowerPoint för att skydda filutgivarens immateriella egendom. Om du inte har behörighet att ändra filen kan du inte spara ändringar i den.
 
-Om du arbetar med en principskyddad fil kanske vissa produktfunktioner inte är tillgängliga eller inte fungerar som vanligt. Om du även har en oskyddad fil öppen aktiveras de flesta funktioner för den oskyddade filen, förutom de som gör att du kan importera eller kopiera innehåll från en principskyddad fil som du inte har kopierings- eller exportbehörighet för.
+Om du arbetar med en principskyddad fil kanske vissa produktfunktioner inte är tillgängliga eller inte fungerar som vanligt. Om en oskyddad fil är öppen aktiveras de flesta funktioner, förutom de som gör att du kan importera eller kopiera innehåll från en principskyddad fil utan kopierings- eller exportbehörighet.
 
 >[!NOTE]
 >
->När du använder Office-program som stöder Document Security Extension rekommenderar vi att du inaktiverar inställningen Windows DEP. För att Office-programmen ska kunna startas smidigt på en dator där Document Security Extension är installerat och McAfee VirusScan med On Access Scan aktiverat, inaktiverar du alternativet Buffer Overflow Protection i McAfee VirusScan Console.
+>När du använder Office-program som stöder Document Security Extension rekommenderar vi att du inaktiverar inställningen Windows DEP. För att Office-programmen ska kunna startas smidigt på en dator med Document Security Extension och McAfee VirusScan med On-Access Scan aktiverat inaktiverar du alternativet Buffer Overflow Protection i McAfee VirusScan Console. Justeringen hjälper till att förhindra potentiella konflikter.
 
 Om en funktion inte är tillgänglig är kommandonamnet på menyn och den relaterade verktygsfältsknappen inte tillgängliga. När du håller muspekaren över kommandot eller knappen i Document Security Extension för Microsoft® Office visas ett verktygstips som anger att kommandot inte är tillgängligt av Document Security.
 
 ### Öppna principskyddade filer {#opening-policy-protected-files}
 
-Du kan öppna principskyddade filer på samma sätt som du använder för att öppna andra filer. Om du inte redan är inloggad på Dokumentsäkerhet uppmanas du att göra det, såvida du inte inte är ansluten till Internet och kan öppna filen offline. Om du avbryter inloggningen nekas åtkomst.
+Du kan öppna principskyddade filer på samma sätt som du använder för att öppna andra filer. Om du inte redan har loggat in på Dokumentsäkerhet uppmanas du att göra det. Det vill säga om du inte är ansluten till Internet och kan öppna filen offline. Om du avbryter inloggningen nekas åtkomst.
 
 Om du inte har behörighet att öppna filen informeras du om att åtkomst nekas. Om filåtkomsträttigheterna har återkallats kan du även dirigeras till en uppdaterad version av filen om en sådan finns tillgänglig. Om du inte kan öppna en principskyddad fil kontaktar du filutgivaren.
 
 När en skyddad fil är öppen anges det i texten i namnlisten att filen är skyddad AEM dokumentsäkerhet.
 
-När du öppnar ett skyddat dokument i Document Security Extension för Microsoft® Office från SharePoint Server måste du se till att det Microsoft® Office-program som är kopplat till filtypen, t.ex. Microsoft® Word, Microsoft® Excel eller Microsoft® PowerPoint, är öppet. Om du försöker öppna filen utan att öppna det associerade programmet kanske inte dokumentet öppnas och ett felmeddelande om att du måste installera det tillämpliga plugin-programmet visas. Förutom att öppna det program som krävs bör du rensa cachemappen innan du öppnar ett skyddat dokument i Document Security Extension för Microsoft® Office från SharePoint Server. När du öppnar ett skyddat dokument från SharePoint Server inaktiveras dessutom alla behörigheter i dokumentet, oavsett vilken princip som tillämpades.
+När du öppnar ett skyddat dokument i Document Security Extension för Microsoft® Office från SharePoint Server måste du se till att Office-programmet som är kopplat till filtypen, t.ex. Word, Excel eller PowerPoint, är öppet. Om du försöker öppna filen utan att öppna det associerade programmet kanske inte dokumentet öppnas och ett felmeddelande om att du måste installera det tillämpliga plugin-programmet visas. Förutom att öppna det program som krävs rekommenderar Adobe att du rensar cachemappen. Gör det innan du öppnar ett skyddat dokument i Document Security Extension för Office från SharePoint Server. När du öppnar ett skyddat dokument från SharePoint Server inaktiveras dessutom alla behörigheter i dokumentet, oavsett vilken princip som tillämpades.
 
-Beroende på vilken autentiseringsmetod som har implementerats för dokumentsäkerhet kan du uppmanas att välja autentiseringsmetod när du öppnar ett skyddat dokument. Om Dokumentsäkerhet har stöd för mer än en autentiseringsmetod visas autentiseringsalternativen för dig. Om t.ex. Document Security-servern tillhandahåller både användarnamn/lösenord och certifikatautentisering kan du välja lämplig autentiseringsmetod. Om certifikatbaserad autentisering är aktiverat uppmanas du att använda certifikatet som du har tagit emot och installerat.
+Beroende på vilken autentiseringsmetod som har implementerats för dokumentsäkerhet kan du uppmanas att välja autentiseringsmetod när du öppnar ett skyddat dokument. Om Dokumentsäkerhet har stöd för mer än en autentiseringsmetod visas autentiseringsalternativen för dig. Om t.ex. en dokumentsäkerhetsserver tillhandahåller både användarnamn/lösenord och certifikatautentisering kan du välja lämplig autentiseringsmetod. Om certifikatbaserad autentisering är aktiverat uppmanas du att använda certifikatet som du har tagit emot och installerat.
 
-Användarupplevelsen när skyddade filer öppnas beror på konfigurationen för ömsesidig autentisering på servern. Om bara ett giltigt klientcertifikat är installerat visas ingen autentiseringsdialogruta och filerna öppnas. Om flera klientcertifikat är installerade på en dator visas dock en autentiseringsdialogruta. Användaren måste välja ett giltigt certifikat för att kunna öppna den skyddade filen.
+Användarupplevelsen när skyddade filer öppnas beror på konfigurationen för ömsesidig autentisering på servern. Om bara ett giltigt klientcertifikat är installerat visas ingen dialogruta för autentisering och filerna öppnas korrekt. Om flera klientcertifikat är installerade på en dator visas dock en autentiseringsdialogruta. Användaren måste välja ett giltigt certifikat för att kunna öppna den skyddade filen.
 
 ### Ta bort principskydd från en fil {#removing-policy-protection-from-a-file}
 
-Om du får ta bort skyddsprofiler från filer som du har skyddat. Om du gör det skyddas filen inte längre av Dokumentsäkerhet.
+Om du tilläts ta bort skyddsprofiler från filer som du har skyddat. Om du gör det skyddas filen inte längre av Dokumentsäkerhet.
 
 1. Välj **Ta bort** på fliken **Dokumentsäkerhet** i Document Security Extension för Microsoft® Office 2010 och 2013.
 
@@ -397,7 +397,7 @@ Om du får ta bort skyddsprofiler från filer som du har skyddat. Om du gör det
 
 ### Visa säkerhetsinställningar {#viewing-security-settings}
 
-Du kan visa de behörigheter som du har för den aktuella filen för utskrift, kopiering från, ändring och åtkomst offline, tillsammans med filens giltighetsperiod.
+Du kan visa de behörigheter som du har för den aktuella filen för utskrift. Du kan även visa behörigheter för den aktuella filen när du kopierar från, ändrar och öppnar offline, tillsammans med filens giltighetsperiod.
 
 I Document Security Extension för Microsoft® Office 2010 visas din behörighet för filen i gruppen Security Status på fliken Document Security.
 
@@ -409,29 +409,29 @@ Gör följande:
 
 Om administratören har aktiverat automatisk tillämpning av principfunktioner skyddas alla dokument som du skapar eller redigerar automatiskt när du sparar dokumentet.
 
-Om Automatisk tillämpning är aktiverat uppmanas du att logga in på dokumentsäkerhetsservern av Document Security Extension för Microsoft® Office. Du måste ange ditt användarnamn och lösenord för att kunna autentiseras av servern. Om du har angett rätt inloggningsuppgifter sparas och skyddas dokumentet.
+Om policyn Auto-apply är aktiverad uppmanas du att logga in på Document Security-servern i Document Security Extension för Microsoft® Office. Ange ditt användarnamn och lösenord så att servern kan autentisera dig. Om du har angett rätt inloggningsuppgifter sparas och skyddas dokumentet.
 
 >[!NOTE]
 >
->Om du inte kan logga in på Dokumentskydd kan det hända att dokumentet inte sparas. Detta beror på hur administratören har konfigurerat principen för autotillämpning. Fråga administratören om hur dokument hanteras i den här situationen.
+>Om du inte kan logga in på Dokumentskydd kan det hända att dokumentet inte sparas. Detta beror på hur administratören har konfigurerat principen för automatisk tillämpning. Fråga administratören om hur dokument hanteras i den här situationen.
 
 ### Synkroniserar för offlineåtkomst {#synchronizing-for-offline-access}
 
-Med hjälp av profiler kan du öppna filer när du är offline och inte är ansluten till Dokumentsäkerhet. Du måste tidigare ha loggat in på Dokumentsäkerhet för att kunna upprätta dina autentiseringsuppgifter med servern innan du kan arbeta offline. Om du tänker arbeta med filer offline rekommenderar vi att du synkroniserar med dokumentskyddet innan du kopplar från för att säkerställa att principinställningarna för filerna är uppdaterade med servern. Vi rekommenderar att du även öppnar filen online en gång innan du öppnar den offline. Om du inte öppnar filen online eller synkroniserar med servern kan du fortfarande använda profilskyddade filer offline. Låneperioden för offlinelån får dock inte ha gått ut och principinställningarna för filen får inte ha ändrats sedan du senast synkroniserade manuellt eller automatiskt med servern.
+Med hjälp av profiler kan du öppna filer när du är offline och inte är ansluten till Dokumentsäkerhet. Du måste tidigare ha loggat in på Dokumentsäkerhet för att kunna upprätta dina autentiseringsuppgifter med servern innan du kan arbeta offline. Om du tänker arbeta med filer offline rekommenderar Adobe att du synkroniserar med dokumentsäkerhet. Gör det innan du kopplar från för att se till att principinställningarna för dina filer är uppdaterade med servern. Adobe rekommenderar även att du öppnar filen online en gång innan du öppnar den offline. Om du inte öppnar filen online eller synkroniserar med servern kan du fortfarande använda profilskyddade filer offline. Låneperioden för offlinelån får dock inte ha gått ut och principinställningarna för filen får inte ha ändrats sedan du senast synkroniserade manuellt eller automatiskt med servern.
 
 Gör följande:
 
 * Välj **Synkronisera offline** på fliken **Dokumentsäkerhet** i Document Security Extension för Microsoft® Office 2010 och 2013.
 
-  ***Obs!**: Knappen Synkronisera offline är tillgänglig även om användaren inte har offlinebehörighet för dokumentet. Men om du markerar knappen händer ingenting. *
+  ***Obs!**: Knappen Synkronisera offline är tillgänglig även om användaren inte har offlinebehörighet för dokumentet. Men om du markerar knappen händer ingenting.*
 
 ### Arbeta med dynamiska vattenstämplar {#working-with-dynamic-watermarks}
 
 Document Security Extension for Microsoft® Office har stöd för dynamiska textbaserade vattenstämplar i policyskyddade dokument. En dynamisk vattenstämpel kan innehålla information som kan ändras, t.ex. datum, tid, användarnamn eller principens namn. Om en användare skriver ut en principskyddad fil och filen innehåller en dynamisk vattenstämpel och behörighet att skriva ut, visas vattenstämpeln i utdata.
 
-Document Security Extension stöder inte vattenstämpelsfunktioner som PDF-baserade vattenstämplar, flera element i en vattenstämpel, textformateringsalternativ och sidintervall.
+Document Security Extension stöder inte vattenstämpelfunktioner. Funktioner för vattenstämplar är bland annat PDF-baserade vattenstämplar, flera element i en vattenstämpel och textformateringsalternativ. De innehåller även sidintervallet.
 
-Du skapar en dynamisk vattenstämpel med webbsidorna Dokumentsäkerhet. Mer information om hur du skapar och inkluderar dynamiska vattenstämplar i ett policyskyddat dokument finns i [Slutanvändarhjälpen för dokumentsäkerhet](https://www.adobe.com/go/learn_lc_euRightsMgmt_11).
+Du kan skapa en dynamisk vattenstämpel med hjälp av webbsidorna Dokumentsäkerhet. Mer information finns i [Slutanvändarhjälpen för dokumentsäkerhet](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/administrator-help/work-with-document-security/document-security).
 
 Document Security Extension for Microsoft® Office har stöd för följande vattenstämpelfunktioner:
 
@@ -453,7 +453,7 @@ Document Security Extension for Microsoft® Office har stöd för följande vatt
   </tr>
   <tr>
    <td><p>Använd som bakgrund</p></td>
-   <td><p>Visningsbeteendet för en dynamisk vattenstämpel är detsamma oavsett om du väljer Använd som bakgrund eller inte.</p><p>För Word 2010 och 2013 visas dynamiska vattenstämplar bara i Utskriftslayout och Förhandsgranska. </p><p>För Excel 2010 och 2013 visas det också i vyerna Förhandsgranska och Sidlayout.</p></td>
+   <td><p>Visningsbeteendet för en dynamisk vattenstämpel är detsamma oavsett om du väljer Använd som bakgrund eller inte.</p><p>För Word 2010 och 2013 visas den dynamiska vattenstämpeln bara i utskriftslayout och förhandsgranskningsläge. </p><p>För Excel 2010 och 2013 visas det också i vyerna Förhandsgranska och Sidlayout.</p></td>
   </tr>
   <tr>
    <td><p>Lodrät position</p></td>
@@ -498,7 +498,7 @@ Om du vill ändra inställningarna för en profil använder du webbsidorna Dokum
 
 ### Återkalla filåtkomstbehörighet {#revoking-file-access-privileges}
 
-Du kan återkalla möjligheten att öppna filer som du har skyddat. När du återkallar åtkomsträttigheter för en fil kan du även ange det meddelande som visas för alla som försöker öppna filen och URL:en till en uppdaterad version av filen om du ersätter den med en ändrad kopia.
+Du kan återkalla möjligheten att öppna filer som du har skyddat. När du återkallar filåtkomst kan du ange ett meddelande när användare försöker öppna det och ange en URL till en uppdaterad version om den ersätts med en ändrad kopia.
 
 1. Gör följande:
 
@@ -510,7 +510,7 @@ Du kan återkalla möjligheten att öppna filer som du har skyddat. När du åte
 
 Mer information om hur du återkallar behörigheter för filåtkomst finns i [Slutanvändarhjälpen för dokumentsäkerhet](https://help.adobe.com/en_US/AEMForms/6.1/RMHelp/).
 
-Åtkomstbehörigheterna kan återställas via webbsidorna Dokumentsäkerhet.
+Behörigheterna kan återställas via webbsidorna Dokumentsäkerhet.
 
 ### Visa filgranskningshistoriken {#viewing-the-file-audit-history}
 
@@ -567,7 +567,7 @@ Om en principskyddad fil som inte tillåter användaren att göra ändringar i d
 
 #### Begränsningar för Word 2010 och Word 2013 {#word-2010-and-word-2013-restrictions}
 
-Om du öppnar en principskyddad fil i Word blir det inte möjligt att spara automatisk filåterställningsinformation förrän du stänger och startar om Word. Dessutom är funktionerna som listas nedan begränsade i de situationer som beskrivs:
+När du öppnar en principskyddad fil i Word går det inte att spara automatisk filåterställningsinformation förrän du stänger och startar om Word. Dessutom är funktionerna som listas nedan begränsade i de situationer som beskrivs:
 
 **Arkiv > Nytt > Nytt från befintligt** Tillgängligt, men det går inte att spara filer som skapats med det här kommandot när en principskyddad fil är öppen. Innehåll i den nya filen kan inte kopieras till en annan fil.
 
@@ -579,15 +579,13 @@ Om du öppnar en principskyddad fil i Word blir det inte möjligt att spara auto
 
 **Arkiv > Spara och skicka** Alla alternativ är inte tillgängliga under en skyddad session.
 
-**Arkiv > Info > Protect-dokument > Kryptera med
-Lösenord, Lägg till digital signatur, Markera som slutgiltig, Begränsa behörighet
-av personer** Inte tillgängligt under en skyddad session.
+**Arkiv > Info > Protect-dokument > Kryptera med lösenord, Lägg till digital signatur, Markera som slutgiltig, Begränsa behörigheter för personer** Inte tillgängligt under en skyddad session.
 
 **Arkiv > Arbetsflöden** Inte tillgängligt under en skyddad session.
 
-***Obs!**: Möjligheten att starta ett arbetsflöde från 2010 års Microsoft® Office-systemversioner av Word, Excel och PowerPoint är endast tillgängligt i Office Professional Plus 2010, Office Enterprise 2010 och Office Ultimate 2010 samt i den fristående Office 2010-versionen av dessa program.* 2}
+***Obs!**: Det går bara att starta ett arbetsflöde i Word, Excel och PowerPoint 2010 i Office Professional Plus 2010, Office Enterprise 2010, Office Ultimate 2010 och fristående 2010-versioner.*
 
-**Blog Post > Publish** Inte tillgängligt under en skyddad session.
+**Blogginlägg > Publish** Inte tillgängligt under en skyddad session.
 
 **Arkiv > Server > Filserverns aktivitetsmeny** Inte tillgänglig under en skyddad session.
 
@@ -605,11 +603,9 @@ av personer** Inte tillgängligt under en skyddad session.
 
 **Granska > Korrektur > Synonymordbok** Begränsad av behörigheten Kopiera. Inte tillgängligt om kopiering inte tillåts.
 
-**Granska > Språk > Översätt > Översätt
-Dokumentet** har aktiverats med behörigheten Kopiera.
+**Review > Language > Translate > Translate Document** Enabled with the Copy permission.
 
-**Granska > Språk > Översätt > Översätt
-Markerad text** aktiverad med behörigheten Kopiera.
+**Granska > Språk > Översätt > Översätt markerad text** aktiverad med behörigheten Kopiera.
 
 **Review > Language > Translate > Mini Translator** Enabled with the Copy permission.
 
@@ -619,13 +615,13 @@ Markerad text** aktiverad med behörigheten Kopiera.
 
 **Granska > Protect > Begränsa redigering** Inte tillgängligt under en skyddad session.
 
-**Visa > Makron** Vissa makron begränsas av behörigheten Kopiera och är inte tillgängliga om inte kopiering tillåts.
+**Visa > Makron** Kopieringsbehörigheten begränsar vissa makron, vilket gör dem otillgängliga om inte kopiering tillåts.
 
 **Tillägg** kan inte läggas till eller tas bort under en skyddad session.
 
 **Online Collaboration** är inte tillgängligt under en skyddad session.
 
-**Huvuddokument och underdokument** styrs av huvuddokumentets policy när de öppnas i huvuddokumentet. Om de öppnas separat går det inte att skriva ut, kopiera från eller ändra deldokument.
+**Princip för primära och underordnade dokument** styr deldokument när du öppnar dem i det primära dokumentet. Om de öppnas separat går det inte att skriva ut, kopiera från eller ändra deldokument.
 
 **Sammanfattningen** är inte tillgänglig under en skyddad session.
 
@@ -633,10 +629,9 @@ Markerad text** aktiverad med behörigheten Kopiera.
 
 **Dokumentpanelen** är inte tillgänglig under en skyddad session.
 
-**Utvecklare > Dokumentmall** Inte tillgänglig under en skyddad session. Om du vill komma åt det här kommandot väljer du Arkiv > Alternativ > Anpassa > fliken Utvecklare > Mallar > Dokumentmall.
+**Utvecklare > Dokumentmall** Inte tillgänglig under en skyddad session. Du öppnar kommandot genom att välja Arkiv > Alternativ > Anpassa > fliken Utvecklare > Mallar > Dokumentmall.
 
-**Disposition > Huvuddokument > Skapa underdokument,
-Infoga underdokument** Inte tillgängligt under en skyddad session.
+**Disposition > Primärt dokument > Skapa underdokument, infoga underdokument** Inte tillgängligt under en skyddad session.
 
 #### Begränsningar för Excel 2010 och Excel 2013 {#excel-2010-and-excel-2013-restrictions}
 
@@ -660,7 +655,7 @@ Funktionerna nedan är begränsade i de situationer som beskrivs nedan:
 
 **Arkiv > Arbetsflöden** Inte tillgängligt under en skyddad session.
 
-***Obs!**: Möjligheten att starta ett arbetsflöde från 2010 års Microsoft® Office-systemversioner av Word, Excel och PowerPoint är endast tillgängligt i Office Professional Plus 2010, Office Enterprise 2010 och Office Ultimate 2010 samt i den fristående Office 2010-versionen av dessa program.* 2}
+***Obs!**: Det går bara att starta ett arbetsflöde i Word, Excel och PowerPoint 2010 i Office Professional Plus 2010, Office Enterprise 2010, Office Ultimate 2010 och fristående 2010-versioner.*
 
 **Arkiv > Server > Filserverns aktivitetsmeny** Inte tillgänglig under en skyddad session.
 
@@ -686,7 +681,7 @@ Funktionerna nedan är begränsade i de situationer som beskrivs nedan:
 
 **Infoga > Text > Sidhuvud och sidfot** Begränsad av behörigheten Ändra. Inte tillgängligt för ett profilskyddat dokument.
 
-**Data > Hämta externa data** från principskyddade filer kan inte importeras.
+**Data > Hämta externa data** Det går inte att importera data från principskyddade filer.
 
 **Data > Disposition > Delsummor** Begränsad av behörigheten Ändra.
 
@@ -708,14 +703,13 @@ Funktionerna nedan är begränsade i de situationer som beskrivs nedan:
 
 **Granska > Ändringar > Tillåt användare att redigera intervall** Inte tillgängligt under en skyddad session.
 
-**Granska > Ändringar > Spåra ändringar > Markera
-Ändringar** Inte tillgängligt för en principskyddad fil som innehåller en dynamisk vattenstämpel.
+**Granska > Ändringar > Spåra ändringar > Markera ändringar** Inte tillgängligt för en principskyddad fil som innehåller en dynamisk vattenstämpel.
 
 **Visa > Makron** Begränsad av behörigheten Ändra.
 
 **Visa > Spara Workspace**-kommandot fungerar inte.
 
-**Utvecklare > XML > Expansionspaket** Vissa makron begränsas av behörigheten Kopiera och är inte tillgängliga om inte kopiering tillåts.
+**Utvecklare > XML > Expansionspaket** Kopieringsbehörigheten begränsar vissa makron, vilket gör dem otillgängliga om du inte tillåter kopiering.
 
 **Formler > Formelgranskning > Felkontroll** Begränsad av behörigheten Ändra. Inte tillgängligt om inte ändring tillåts.
 
@@ -723,7 +717,7 @@ Funktionerna nedan är begränsade i de situationer som beskrivs nedan:
 
 **Spara information för automatisk återställning** Inte tillgänglig under en skyddad session.
 
-***Obs!**Om du försöker ändra en cell i en principskyddad fil för vilken du inte har behörighet att göra ändringar, visas ett felaktigt varningsmeddelande som anger att du måste ta bort skyddet från filen med kommandot Ta bort bladets skydd. Kommandot Ta bort skydd för blad tar inte bort principskyddet från filen.*
+***Obs!**Om du försöker ändra en cell i en principskyddad fil utan behörighet visas en varning i Excel om att du inte kan använda kommandot Ta bort bladets skydd för att ta bort skyddet.*
 
 #### Begränsningar för PowerPoint 2010 och PowerPoint 2013 {#powerpoint-2010-and-powerpoint-2013-restrictions}
 
@@ -739,12 +733,9 @@ Funktionerna nedan är begränsade i de situationer som beskrivs nedan:
 
 **Arkiv > Spara och skicka** Inte tillgängligt under en skyddad session.
 
-**Arkiv > Info > Protect Presentation > Kryptera
-med Lösenord, Lägg till en digital signatur, Markera som slutgiltig, Begränsa
-Behörighet för personer** är inte tillgänglig under en skyddad session.
+**Arkiv > Info > Protect Presentation > Kryptera med lösenord, Lägg till en digital signatur, Markera som slutgiltig, Begränsa behörigheter för personer** Inte tillgängligt under en skyddad session.
 
-**Arkiv > PowerPoint-alternativ > Spara automatisk återställning
-Informationen** är inte tillgänglig under en skyddad session.
+**Arkiv > PowerPoint-alternativ > Spara information för automatisk återställning** Inte tillgängligt under en skyddad session.
 
 **Arkiv > Server > Filserverns aktivitetsmeny** Inte tillgänglig under en skyddad session.
 
@@ -754,12 +745,11 @@ Informationen** är inte tillgänglig under en skyddad session.
 
 **Hem > Urklipp > Klistra in special** Begränsat av behörigheten Ändra.
 
-**Hem > Bilder > Nya bildrutor > Bilder från disposition,** Återanvänd bilder är inte tillgängliga under en skyddad session.
+**Hem > Bilder > Nya bilder > Bilder från disposition, Återanvänd bilder** Inte tillgängligt under en skyddad session.
 
 **Infoga > Text > Objekt** Inte tillgängligt under en skyddad session. Det går inte att infoga principskyddade filer när som helst.
 
-**Design > Bakgrund > Bakgrundsformat, Dölj
-Bakgrundsgrafik, formatera bakgrund** Inte tillgängligt för en principskyddad fil som innehåller en dynamisk vattenstämpel.
+**Design > Bakgrund > Bakgrundsformat, Dölj bakgrundsgrafik, Formatera bakgrund** Inte tillgängligt för en principskyddad fil som innehåller en dynamisk vattenstämpel.
 
 **Bildspel > Konfigurera > Spela in bildspel** Begränsat av ändringsbehörighet.
 
@@ -771,7 +761,7 @@ Bakgrundsgrafik, formatera bakgrund** Inte tillgängligt för en principskyddad 
 
 **Visa > Presentationsvyer > Bildspel** Begränsat av behörigheten Ändra. Om ändringar inte tillåts kan bildspel inte visas om filen har ändrats.
 
-**Visa > Makron** Vissa makron begränsas av behörigheten Kopiera och är inte tillgängliga om inte kopiering tillåts.
+**Visa > Makron** Kopieringsbehörigheten begränsar vissa makron, vilket gör dem otillgängliga om inte kopiering tillåts.
 
 **Tillägg** kan inte läggas till eller tas bort under en skyddad session.
 
@@ -781,12 +771,12 @@ Bakgrundsgrafik, formatera bakgrund** Inte tillgängligt för en principskyddad 
 
 Du kan använda autentiseringsleverantörer från tredje part med AEM Forms Document Security. Dessa autentiseringsleverantörer hjälper dig att lägga till ett extra åtkomstlager till de skyddade dokumenten. AEM Forms Document Security har stöd för följande utökade autentiseringsarbetsflöden:
 
-* Utökad autentisering med AEM Forms-standardwebbadress
+* Utökad autentisering med standardwebbadressen för AEM Forms
 * Utökad autentisering med en anpassad URL
 * Standardarbetsflöde för utökad autentisering med tredjepartsidentitetsleverantörer konfigurerade på AEM Forms på JEE-servern
 * Anpassat arbetsflöde för utökad autentisering med tredjepartsidentitetsleverantörer konfigurerade på AEM Forms på JEE-servern
-* Utökad autentisering med anpassad sida för att lista SAML-autentiseringar
+* Utökad autentisering med en anpassad sida för att lista SAML-autentiseringar
 
 ## Ordlista {#glossary}
 
-Mer information om LiveCycle och AEM formulär om JEE-terminologi finns i [Kapitel 19: Ordlista](https://www.adobe.com/go/learn_aemforms_designer_65).
+Mer information om LiveCycle och AEM formulär om JEE-terminologi finns i [Kapitel 19: Ordlista](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf).
